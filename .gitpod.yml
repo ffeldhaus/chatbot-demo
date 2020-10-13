@@ -15,7 +15,8 @@ tasks:
     mkdir -p /home/gitpod/.android
     touch /home/gitpod/.android/repositories.cfg
     export PATH=/usr/lib/dart/bin:$FLUTTER_HOME/bin:$ANDROID_CMDLINE_TOOLS/tools/bin:$PATH
-    echo "y" | $ANDROID_CMDLINE_TOOLS/tools/bin/sdkmanager "platform-tools" "platforms;android-30" "build-tools;30.0.0"
+    yes | $ANDROID_CMDLINE_TOOLS/tools/bin/sdkmanager "platform-tools" "platforms;android-30" "build-tools;30.0.0"
+    yes | $ANDROID_CMDLINE_TOOLS/tools/bin/sdkmanager --licenses
 vscode:
   extensions:
     - Dart-Code.flutter@3.15.0:yOpvKlbjJs29tD2wFEr6sw==
