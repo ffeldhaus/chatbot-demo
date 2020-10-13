@@ -24,7 +24,7 @@ USER gitpod
 
 # install flutter
 RUN cd /home/gitpod && \
-    git clone https://github.com/flutter/flutter.git -b stable --depth 1
+    git clone https://github.com/flutter/flutter.git -b stable --depth 1 --no-single-branch
 
 # install android studio
 RUN cd /home/gitpod && \
