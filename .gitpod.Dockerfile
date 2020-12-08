@@ -46,9 +46,9 @@ RUN mkdir -p $ANDROID_CMDLINE_TOOLS && \
 RUN $FLUTTER_HOME/bin/flutter precache
 
 # add flutter web support
-RUN flutter channel beta && \
-    flutter upgrade && \
-    flutter config --enable-web
+RUN $FLUTTER_HOME/bin/flutter channel beta && \
+    $FLUTTER_HOME/bin/flutter upgrade && \
+    $FLUTTER_HOME/bin/flutter config --enable-web
 
 # install AAndroid SDK platform tools for specific android version(s) and accept licenses
 RUN yes | $ANDROID_CMDLINE_TOOLS/tools/bin/sdkmanager "platform-tools" "platforms;android-30" "build-tools;30.0.0" && \
